@@ -66,13 +66,13 @@ export default function DownloadPage() {
   placeholder="Enter your email address"
   value={email}
   onChange={(e) => setEmail(e.target.value)}
-  className="w-[280px] h-16 px-6 bg-white border border-gray-300 rounded-xl shadow-sm"
+  className="w-[260px] h-16 px-6 bg-white border border-gray-300 rounded-xl shadow-sm"
 />
 
   <div className="mt-4">
   <button
   onClick={handleSubmit}
-  style={{ width: "280px" }}
+  style={{ width: "260px" }}
   className="h-16 bg-[#00897B] text-white font-semibold rounded-xl hover:opacity-90 transition"
 >
   Join the Journey 🐾
