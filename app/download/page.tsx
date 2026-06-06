@@ -66,7 +66,7 @@ export default function DownloadPage() {
   placeholder="Enter your email address"
   value={email}
   onChange={(e) => setEmail(e.target.value)}
-  className="w-[320px] h-16 px-6 bg-white border border-gray-300 rounded-xl shadow-sm"
+  className="w-[244px] h-16 px-6 bg-white border border-gray-300 rounded-xl shadow-sm"
 />
 
   <div className="mt-4">
