@@ -156,6 +156,15 @@ export default function PrivacyPage() {
           </p>
 
           <p className="mt-4">
+  Users may optionally upload screenshots, images, or other supporting
+  materials when submitting reports, flagging content, or participating
+  in community safety and moderation activities. Such content may be
+  stored, reviewed, and processed solely for the purpose of evaluating
+  reports, improving platform safety, preventing misuse, and supporting
+  the intended functionality of the service.
+</p>
+
+          <p className="mt-4">
             If a user deletes their account, personal account information such
             as their profile details, email address, and profile photo may be
             removed from the platform. However, certain reports, sightings,
