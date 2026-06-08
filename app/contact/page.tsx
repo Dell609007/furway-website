@@ -9,7 +9,7 @@ export default function ContactPage() {
           href="/"
           className="text-[#00897B] font-semibold hover:opacity-70 transition"
         >
-          🐾 Furway
+          🐾 Home
         </Link>
       </div>
 

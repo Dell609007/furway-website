@@ -7,7 +7,7 @@ export default function AboutPage() {
     href="/"
     className="text-[#00897B] font-semibold hover:opacity-70 transition"
   >
-    🐾 Furway
+    🐾 Home
   </Link>
 </div>
       <h1 className="text-4xl font-bold text-[#FF6B4A] mb-8">
