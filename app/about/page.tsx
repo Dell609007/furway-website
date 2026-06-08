@@ -1,15 +1,8 @@
-import Link from "next/link";
+
 export default function AboutPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="flex justify-end mb-6">
-  <Link
-    href="/"
-    className="text-[#00897B] font-semibold hover:opacity-70 transition"
-  >
-    🐾 Home
-  </Link>
-</div>
+    <div className="max-w-6xl mx-auto px-6 pt-0 pb-16">
+        
       <h1 className="text-4xl font-bold text-[#FF6B4A] mb-8">
         About Furway
       </h1>

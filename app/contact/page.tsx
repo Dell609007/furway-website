@@ -2,16 +2,7 @@ import Link from "next/link";
 
 export default function ContactPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16 text-[#0D3D35]">
-
-      <div className="flex justify-end mb-6">
-        <Link
-          href="/"
-          className="text-[#00897B] font-semibold hover:opacity-70 transition"
-        >
-          🐾 Home
-        </Link>
-      </div>
+    <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
       <h1 className="text-5xl font-bold text-[#FF6B4A]">
         Contact

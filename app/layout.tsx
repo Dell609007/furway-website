@@ -31,23 +31,28 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#F0F5F4]">
 
-  <header className="max-w-6xl mx-auto w-full px-6 pt-6">
-    <Link
-      href="/"
-      className="flex items-center gap-3 w-fit hover:opacity-80 transition"
-    >
-      <Image
-        src="/furway-logo-transparent-1024.png"
-        alt="Furway"
-        width={42}
-        height={42}
-      />
+  <header className="max-w-6xl mx-auto w-full px-6 pt-4 flex justify-between items-center">
 
-      <span className="text-[#0D3D35] font-bold text-xl">
-        Furway
-      </span>
-    </Link>
-  </header>
+  <Link
+    href="/"
+    className="hover:opacity-80 transition"
+  >
+    <Image
+      src="/furway-logo-transparent-1024.png"
+      alt="Furway"
+      width={90}
+      height={90}
+    />
+  </Link>
+
+  <Link
+    href="/"
+    className="text-[#00897B] font-semibold hover:opacity-70 transition"
+  >
+    🐾 Home
+  </Link>
+
+</header>
 
   <main className="flex-1">
     {children}
