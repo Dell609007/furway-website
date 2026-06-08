@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -28,6 +30,25 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F0F5F4]">
+
+  <header className="max-w-6xl mx-auto w-full px-6 pt-6">
+    <Link
+      href="/"
+      className="flex items-center gap-3 w-fit hover:opacity-80 transition"
+    >
+      <Image
+        src="/furway-logo-transparent-1024.png"
+        alt="Furway"
+        width={42}
+        height={42}
+      />
+
+      <span className="text-[#0D3D35] font-bold text-xl">
+        Furway
+      </span>
+    </Link>
+  </header>
+
   <main className="flex-1">
     {children}
   </main>
