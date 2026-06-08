@@ -70,9 +70,40 @@ export default function TermsPage() {
           </p>
         </section>
 
+<section>
+  <h2 className="text-2xl font-bold mb-4">
+    4. Feedback and Communications
+  </h2>
+
+  <p>
+    Users may voluntarily submit feedback, bug reports, feature
+    requests, suggestions, or other information through Furway.
+  </p>
+
+  <p className="mt-4">
+    Where available, users may choose to provide consent for the
+    Furway team to contact them regarding their submission. Such
+    communication may include requests for clarification, additional
+    information, follow-up questions, product research, community
+    initiatives, updates related to submitted feedback or reports,
+    participation in testimonials, or other activities related to
+    the development and promotion of the platform.
+  </p>
+
+  <p className="mt-4">
+    Providing such consent is optional and may be withdrawn at any
+    time.
+  </p>
+
+  <p className="mt-4">
+    Any collection and processing of personal information related to
+    these communications is governed by the Furway Privacy Policy.
+  </p>
+</section>
+
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            4. Prohibited Activities
+            5. Prohibited Activities
           </h2>
 
           <ul className="list-disc ml-6">
@@ -85,7 +116,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            5. Intellectual Property
+            6. Intellectual Property
           </h2>
 
           <p>
@@ -96,7 +127,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            6. Service Availability
+            8. Service Availability
           </h2>
 
           <p>
@@ -119,7 +150,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            8. Contact Us
+            9. Contact Us
           </h2>
 
           <p>

@@ -1,53 +1,46 @@
-import Link from "next/link";
 export default function PrivacyPage() {
-  return (
-    <main className="max-w-4xl mx-auto px-6 py-16 text-[#0D3D35]">
-        <div className="flex justify-end mb-6">
-  <Link
-  href="/"
-  className="text-[#00897B] font-semibold hover:opacity-70 transition"
->
-  🐾 Home
-</Link>
-</div>
-    <h1 className="text-5xl font-bold text-[#FF6B4A]">
-  Privacy Policy
-</h1>
+return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
-<p className="text-sm text-gray-500 mt-4 mb-10">
-  Last Updated: June 4, 2026
-</p>
+```
+  <h1 className="text-5xl font-bold text-[#FF6B4A]">
+    Privacy Policy
+  </h1>
 
-      <div className="space-y-8">
+  <p className="text-sm text-gray-500 mt-4 mb-10">
+    Last Updated: June 4, 2026
+  </p>
 
-        <section>
-          <p>
-            Furway ("we", "our", or "us") is committed to protecting your
-            privacy and handling your personal information responsibly.
-          </p>
+  <div className="space-y-8">
 
-          <p className="mt-4">
-            This Privacy Policy explains what information we collect, how we
-            use it, and the choices available to you when using the Furway
-            platform.
-          </p>
-        </section>
+    <section>
+      <p>
+        Furway ("we", "our", or "us") is committed to protecting your
+        privacy and handling your personal information responsibly.
+      </p>
 
-        <section>
-          <h2 className="text-2xl font-bold mb-4">
-            1. Information We Collect
-          </h2>
+      <p className="mt-4">
+        This Privacy Policy explains what information we collect, how we
+        use it, and the choices available to you when using the Furway
+        platform.
+      </p>
+    </section>
 
-          <h3 className="font-semibold mb-2">Account Information</h3>
-<ul className="list-disc ml-6 mb-4">
-  <li>Name</li>
-  <li>Email address</li>
-  <li>Profile picture</li>
-  <li>
-    Authentication information provided through Google Sign-In or
-    email registration
-  </li>
-</ul>
+    <section>
+      <h2 className="text-2xl font-bold mb-4">
+        1. Information We Collect
+      </h2>
+
+      <h3 className="font-semibold mb-2">Account Information</h3>
+
+      <ul className="list-disc ml-6 mb-4">
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Profile picture</li>
+        <li>
+          Authentication information provided through Google Sign-In or
+          email registration
+        </li>
+      </ul>
 
 <h3 className="font-semibold mb-2">
   Communications and Launch Notifications
@@ -102,7 +95,22 @@ export default function PrivacyPage() {
             <li>Help reunite lost pets with their families</li>
             <li>Improve platform safety, reliability, and performance</li>
             <li>Comply with legal obligations</li>
+            <li>
+  Contact users who have voluntarily consented to receive
+  follow-up communications regarding feedback, reports, feature
+  requests, user research, community initiatives, testimonials,
+  or other activities related to the development and improvement
+  of Furway
+</li>
           </ul>
+          <p className="mt-4">
+  Where users have provided their consent, Furway may contact them
+  regarding submitted feedback, reports, feature suggestions,
+  participation in user research, community campaigns, testimonials,
+  or other initiatives related to the development and promotion of
+  the platform. Users may withdraw their consent at any time by
+  contacting info@furway.app.
+</p>
         </section>
 
         <section>
