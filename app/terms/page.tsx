@@ -127,7 +127,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            8. Service Availability
+            7. Service Availability
           </h2>
 
           <p>
@@ -138,7 +138,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            7. Changes to These Terms
+            8. Changes to These Terms
           </h2>
 
           <p>
@@ -150,7 +150,45 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            9. Contact Us
+            9. Location &amp; Notifications
+          </h2>
+
+          <p>
+            Certain Furway features rely on location information and push
+            notifications. By enabling these features, users consent to the
+            collection, storage, and use of their most recent location for
+            platform functionality, nearby reports, and location-based
+            notifications.
+          </p>
+
+          <p className="mt-4">
+            Users may disable location permissions or notifications through
+            their device settings, although certain platform features may
+            become unavailable or less effective.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">
+            10. Moderation and Safety
+          </h2>
+
+          <p>
+            Furway may review reports submitted by users regarding content,
+            reports, comments, or user profiles.
+          </p>
+
+          <p className="mt-4">
+            We reserve the right to remove content, restrict access, suspend
+            accounts, or take other moderation actions when necessary to
+            protect users, animals, the community, or the integrity of the
+            platform.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">
+            11. Contact Us
           </h2>
 
           <p>

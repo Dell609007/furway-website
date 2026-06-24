@@ -94,7 +94,12 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
             <li>Improve community coordination around animal welfare</li>
             <li>Help reunite lost pets with their families</li>
             <li>Improve platform safety, reliability, and performance</li>
-            <li>Comply with legal obligations</li>
+<li>Comply with legal obligations</li>
+            <li>
+  Store and update a user&apos;s most recent known location in
+  order to provide nearby reports, community alerts, and
+  location-based platform functionality
+</li>
             <li>
   Contact users who have voluntarily consented to receive
   follow-up communications regarding feedback, reports, feature
@@ -144,11 +149,62 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
             Location information is collected only when necessary for platform
             functionality and when permission has been granted by the user.
           </p>
+
+          <p className="mt-4">
+            Furway stores a user&apos;s most recent known location in order to
+            provide nearby reports, location-based notifications, and
+            community safety features.
+          </p>
+
+          <p className="mt-4">
+            The stored location is updated when the user accesses the
+            platform. Furway does not maintain a historical record of user
+            movements and only stores the user&apos;s most recent known
+            location.
+          </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            5. Photos and User Content
+            5. Push Notifications
+          </h2>
+          <p>
+            Furway may send push notifications related to missing pets,
+            emergency animal welfare reports, safety alerts, account-related
+            notifications, and moderation actions.
+          </p>
+
+          <p className="mt-4">
+            To provide these notifications, Furway may store notification
+            tokens associated with a user&apos;s device.
+          </p>
+
+          <p className="mt-4">
+            Users may disable push notifications at any time through their
+            device settings.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">
+            6. Reporting and Community Safety
+          </h2>
+          <p>
+            Users may report content, animal reports, comments, or user
+            profiles that they believe violate community guidelines or
+            applicable laws.
+          </p>
+
+          <p className="mt-4">
+            Information submitted through reporting tools may be reviewed by
+            Furway administrators for moderation, safety, fraud prevention,
+            and platform integrity purposes.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">
+            7. Photos and User Content
           </h2>
 
           <ul className="list-disc ml-6 mb-4">
@@ -190,7 +246,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            6. AI-Assisted Image Processing
+            8. AI-Assisted Image Processing
           </h2>
 
           <p>
@@ -211,7 +267,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            7. Cookies and Similar Technologies
+            9. Cookies and Similar Technologies
           </h2>
 
           <p>
@@ -227,7 +283,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            8. Data Storage and Security
+            10. Data Storage and Security
           </h2>
 
           <p>
@@ -249,7 +305,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            9. Data Sharing
+            11. Data Sharing
           </h2>
 
           <p>
@@ -257,9 +313,12 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
           </p>
 
           <p className="mt-4">
-            Information may be shared with trusted service providers that help
-            us operate the platform, including authentication, storage, and AI
-            processing providers, when necessary for providing the service.
+            Information may be shared with the third-party service providers
+            Furway uses to operate the platform — currently Google
+            (authentication), Supabase (data storage), and OpenAI (image
+            analysis used to filter inappropriate content and support
+            matching of stray animal reports) — only to the extent necessary
+            to provide these services.
           </p>
 
           <p className="mt-4">
@@ -270,7 +329,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            10. Your Rights
+            12. Your Rights
           </h2>
 
           <p className="mb-4">
@@ -290,7 +349,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            11. Changes to This Policy
+            13. Changes to This Policy
           </h2>
 
           <p>
@@ -305,7 +364,7 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            12. Contact Us
+            14. Contact Us
           </h2>
 
           <p>
