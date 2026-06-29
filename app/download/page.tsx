@@ -1,37 +1,73 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 
 export default function DownloadPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => setShowToast(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
 
   const handleSubmit = async () => {
-    if (!email) {
-      setMessage("Please enter your email address.");
-      return;
-    }
-
-    const { error } = await supabase
-      .from("early_supporters")
-      .insert([{ email }]);
-
-    if (error) {
-      if (error.message.toLowerCase().includes("duplicate")) {
-        setMessage("This email is already on the list 🐾");
-      } else {
-        setMessage("Something went wrong. Please try again.");
+    try {
+      if (!email) {
+        setMessage("Please enter your email address.");
+        return;
       }
-      return;
-    }
 
-    setMessage("Thank you for joining the journey 🐾");
-    setEmail("");
+      const { error } = await supabase
+        .from("early_supporters")
+        .insert([{ email }]);
+
+      if (error) {
+        if (error.message.toLowerCase().includes("duplicate")) {
+          setMessage("This email is already on the list 🐾");
+        } else {
+          setMessage("Something went wrong. Please try again.");
+        }
+        return;
+      }
+
+      setMessage("");
+      setEmail("");
+      setShowToast(true);
+    } catch (err: any) {
+      setMessage("Something went wrong. Please try again.");
+    }
   };
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
+
+      {/* Toast popup */}
+      {showToast && (
+        <div className="fixed top-6 right-6 z-50 bg-[#00897B] text-white px-6 py-4 rounded-xl shadow-lg max-w-sm animate-[fadeIn_0.3s_ease-out]">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">🐾</span>
+            <div>
+              <p className="font-semibold">Thank you for joining the journey!</p>
+              <p className="text-sm text-white/90 mt-1">
+                We&apos;ll let you know as soon as we have news.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowToast(false)}
+              className="ml-2 text-white/80 hover:text-white text-lg leading-none"
+              aria-label="Close"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
 
       <h1 className="text-5xl font-bold text-[#FF6B4A] mb-10">
         Furway is coming soon
@@ -63,6 +99,7 @@ export default function DownloadPage() {
 
         <div className="mt-4">
           <button
+            type="button"
             onClick={handleSubmit}
             style={{ width: "260px" }}
             className="h-16 bg-[#00897B] text-white font-semibold rounded-xl hover:opacity-90 transition"
