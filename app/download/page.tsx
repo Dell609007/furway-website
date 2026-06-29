@@ -38,6 +38,14 @@ export default function DownloadPage() {
       setMessage("");
       setEmail("");
       setShowToast(true);
+
+      fetch("https://backend-service-hub.replit.app/api/supporters/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      }).catch(() => {
+        // silent fail - email already saved, confirmation email is a bonus
+      });
     } catch (err: any) {
       setMessage("Something went wrong. Please try again.");
     }
