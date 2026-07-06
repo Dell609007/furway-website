@@ -1,12 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
-export default function DownloadPage() {
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function DownloadPageInner() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const [utmSource, setUtmSource] = useState<string | null>(null);
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const utm = searchParams.get("utm_source");
+    if (utm) {
+      setUtmSource(utm);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (showToast) {
@@ -17,14 +30,21 @@ export default function DownloadPage() {
 
   const handleSubmit = async () => {
     try {
-      if (!email) {
+      const trimmedEmail = email.trim();
+
+      if (!trimmedEmail) {
         setMessage("Please enter your email address.");
+        return;
+      }
+
+      if (!EMAIL_REGEX.test(trimmedEmail)) {
+        setMessage("Please enter a valid email address.");
         return;
       }
 
       const { error } = await supabase
         .from("early_supporters")
-        .insert([{ email }]);
+        .insert([{ email: trimmedEmail, "Κανάλι": utmSource ?? "direct" }]);
 
       if (error) {
         if (error.message.toLowerCase().includes("duplicate")) {
@@ -42,7 +62,7 @@ export default function DownloadPage() {
       fetch("https://backend-service-hub.replit.app/api/supporters/confirm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: trimmedEmail }),
       }).catch(() => {
         // silent fail - email already saved, confirmation email is a bonus
       });
@@ -136,5 +156,13 @@ export default function DownloadPage() {
       </p>
 
     </main>
+  );
+}
+
+export default function DownloadPage() {
+  return (
+    <Suspense fallback={null}>
+      <DownloadPageInner />
+    </Suspense>
   );
 }
