@@ -1,13 +1,6 @@
 import DownloadForm from "./DownloadForm";
 
-export default async function DownloadPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ utm_source?: string }>;
-}) {
-  const params = await searchParams;
-  const utmSource = params.utm_source ?? null;
-
+export default function DownloadPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
       <h1 className="text-5xl font-bold text-[#FF6B4A] mb-10">
@@ -23,7 +16,7 @@ export default async function DownloadPage({
         </p>
       </div>
 
-      <DownloadForm utmSource={utmSource} />
+      <DownloadForm />
 
       <p className="mt-8 text-sm text-gray-600 max-w-xl">
         We will only use your email to send Furway-related updates,

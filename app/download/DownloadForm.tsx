@@ -5,10 +5,19 @@ import { supabase } from "@/lib/supabase";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default function DownloadForm({ utmSource }: { utmSource: string | null }) {
+export default function DownloadForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const [utmSource, setUtmSource] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utm = params.get("utm_source");
+    if (utm) {
+      setUtmSource(utm);
+    }
+  }, []);
 
   useEffect(() => {
     if (showToast) {
