@@ -1,25 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default function DownloadForm() {
+export default function DownloadForm({ utmSource }: { utmSource: string | null }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
-  const [utmSource, setUtmSource] = useState<string | null>(null);
-
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const utm = searchParams.get("utm_source");
-    if (utm) {
-      setUtmSource(utm);
-    }
-  }, [searchParams]);
 
   useEffect(() => {
     if (showToast) {
@@ -63,9 +52,7 @@ export default function DownloadForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmedEmail }),
-      }).catch(() => {
-        // silent fail - email already saved, confirmation email is a bonus
-      });
+      }).catch(() => {});
     } catch (err: any) {
       setMessage("Something went wrong. Please try again.");
     }
