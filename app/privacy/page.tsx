@@ -1,5 +1,5 @@
 export default function PrivacyPage() {
-return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
+return ( <div className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 
 
   <h1 className="text-5xl font-bold text-[#FF6B4A]">
@@ -378,6 +378,6 @@ return ( <main className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
         </section>
 
       </div>
-    </main>
+    </div>
   );
 }

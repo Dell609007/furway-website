@@ -1,4 +1,3 @@
-
 export default function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-0 pb-16">
@@ -61,9 +60,9 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-gray-700">
-            When a pet goes missing, every minute matters. Furway helps owners
-            share missing pet reports, receive sightings from the community,
-            and increase the chances of a safe reunion.
+            Furway helps owners share missing pet reports, so nearby
+            community members get notified right away. The community shares
+            real-time sightings, increasing the chances of a safe reunion.
           </p>
         </div>
 
