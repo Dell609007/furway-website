@@ -47,10 +47,11 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-gray-700">
-            Imagine a shared map where people can mark where they saw an animal
-            in need. A hungry dog, a lost pet, an injured animal, or a colony
-            that needs food. With Furway, communities can share this information in real time
-            and respond faster when animals need attention.
+            Imagine a shared global map where people can mark where they saw
+            an animal in need. A hungry dog, a lost pet, an injured animal, or
+            a colony that needs food. With Furway, communities can share this
+            information in real time and respond faster when animals need
+            attention.
           </p>
         </div>
 
