@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/",
+    languages: {
+      en: "https://furway.app/",
+      el: "https://furway.app/el",
+      "x-default": "https://furway.app/",
+    },
+  },
+};
 export default function HomePage() {
   return (
     <div className="flex-1 flex items-center justify-center bg-[#F0F5F4] pt-24">

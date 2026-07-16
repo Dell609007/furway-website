@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/contact",
+    languages: {
+      en: "https://furway.app/contact",
+      el: "https://furway.app/el/contact",
+      "x-default": "https://furway.app/contact",
+    },
+  },
+};
 import Link from "next/link";
 
 export default function ContactPage() {

@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/privacy",
+    languages: {
+      en: "https://furway.app/privacy",
+      el: "https://furway.app/el/privacy",
+      "x-default": "https://furway.app/privacy",
+    },
+  },
+};
 export default function PrivacyPage() {
 return ( <div className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">
 

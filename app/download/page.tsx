@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/download",
+    languages: {
+      en: "https://furway.app/download",
+      el: "https://furway.app/el/download",
+      "x-default": "https://furway.app/download",
+    },
+  },
+};
 import DownloadForm from "./DownloadForm";
 
 export default function DownloadPage() {

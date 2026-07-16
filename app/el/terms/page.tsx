@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/el/terms",
+    languages: {
+      en: "https://furway.app/terms",
+      el: "https://furway.app/el/terms",
+      "x-default": "https://furway.app/terms",
+    },
+  },
+};
 export default function TermsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-8 text-[#0D3D35]">

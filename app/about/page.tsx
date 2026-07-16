@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://furway.app/about",
+    languages: {
+      en: "https://furway.app/about",
+      el: "https://furway.app/el/about",
+      "x-default": "https://furway.app/about",
+    },
+  },
+};
 export default function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-0 pb-16">
